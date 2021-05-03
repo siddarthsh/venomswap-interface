@@ -75,6 +75,18 @@ export const STAKING_REWARDS_INFO: {
     {
       pid: 16,
       tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1SUSHI/VIPER')
+    },
+    {
+      pid: 17,
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1UNI/VIPER')
+    },
+    {
+      pid: 18,
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1WISE/1ETH')
+    },
+    {
+      pid: 19,
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'WONE/1WBTC')
     }
   ],
   [ChainId.HARMONY_TESTNET]: [
