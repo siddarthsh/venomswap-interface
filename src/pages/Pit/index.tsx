@@ -127,7 +127,6 @@ export default function Pit({
 
   const pit = chainId ? PIT[chainId] : undefined
   const pitSettings = chainId ? PIT_SETTINGS[chainId] : undefined
-  const pitTVL = TVLs.totalPitTVL
   const pitBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, pit, 'balanceOf', PIT_INTERFACE)
 
   const userLiquidityStaked = pitBalance
@@ -175,7 +174,7 @@ export default function Pit({
         <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
           <NonCenteredDataRow style={{ alignItems: 'baseline' }}>
             <TYPE.mediumHeader></TYPE.mediumHeader>
-            {pitTVL && pitTVL.greaterThan('0') && (
+            {TVLs?.stakingPoolTVL?.greaterThan('0') && (
               <TYPE.black>
                 <span role="img" aria-label="wizard-icon" style={{ marginRight: '0.5rem' }}>
                   🏆
