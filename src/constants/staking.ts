@@ -96,7 +96,7 @@ export const STAKING_REWARDS_INFO: {
   [ChainId.HARMONY_TESTNET]: [
     {
       pid: 0,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_TESTNET, 'WONE/BUSD')
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_TESTNET, 'WONE/1BUSD')
     },
     {
       pid: 1,
@@ -108,7 +108,7 @@ export const STAKING_REWARDS_INFO: {
     },
     {
       pid: 3,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_TESTNET, 'BUSD/VIPER')
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_TESTNET, '1BUSD/VIPER')
     }
   ],
   [ChainId.BSC_TESTNET]: [
