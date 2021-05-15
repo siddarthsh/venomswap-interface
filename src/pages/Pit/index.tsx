@@ -26,6 +26,7 @@ import { GOVERNANCE_TOKEN_INTERFACE } from '../../constants/abis/governanceToken
 import { PIT_INTERFACE } from '../../constants/abis/pit'
 import useGovernanceToken from 'hooks/useGovernanceToken'
 import useTotalCombinedTVL from '../../hooks/useTotalCombinedTVL'
+import usePitRatio from '../../hooks/usePitRatio'
 import { useStakingInfo } from '../../state/stake/hooks'
 import filterStakingInfos from '../../utils/filterStakingInfos'
 import CombinedTVL from '../../components/CombinedTVL'
@@ -128,6 +129,7 @@ export default function Pit({
   const pit = chainId ? PIT[chainId] : undefined
   const pitSettings = chainId ? PIT_SETTINGS[chainId] : undefined
   const pitBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, pit, 'balanceOf', PIT_INTERFACE)
+  const govTokenPitTokenRatio = usePitRatio()
 
   const userLiquidityStaked = pitBalance
   const userLiquidityUnstaked = govTokenBalance
@@ -209,7 +211,14 @@ export default function Pit({
             <AutoColumn gap="sm">
               <RowBetween>
                 <div>
-                  <TYPE.black>Your x{govToken?.symbol} Balance</TYPE.black>
+                  <TYPE.black>
+                    Your x{govToken?.symbol} Balance
+                    {govTokenPitTokenRatio && (
+                      <TYPE.italic display="inline" marginLeft="0.25em">
+                        (1 x{govToken?.symbol} = {govTokenPitTokenRatio.toSignificant(4)} {govToken?.symbol})
+                      </TYPE.italic>
+                    )}
+                  </TYPE.black>
                 </div>
               </RowBetween>
               <RowBetween style={{ alignItems: 'baseline' }}>
