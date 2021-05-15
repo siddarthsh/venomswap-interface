@@ -3187,10 +3187,10 @@
   resolved "https://registry.yarnpkg.com/@venomswap/community-token-list/-/community-token-list-1.3.0.tgz#9f871c040f1fe16de58e28055f7f3fc7147c9e46"
   integrity sha512-EeC1cOzSe6DByVSAGZsZyS/8k6Ca3pOTH05bbHe5WFylmJjzFmsnrcIeztuhr6n2FxwbiouNOFmBr5dF+qGNyQ==
 
-"@venomswap/contracts@^1.0.1":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@venomswap/contracts/-/contracts-1.0.3.tgz#26aeb3a250c93a2443c7b9c04c9c7ea1ad818a04"
-  integrity sha512-awjblNeFcj9yNZP6GdUgmxag7aEzHm8pkjTnOLcIuNiq9sEZW5SNKHytxuyBsgu6FfVdJ5KS92pausADQYNWGw==
+"@venomswap/contracts@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@venomswap/contracts/-/contracts-1.0.4.tgz#c45d74536eb04ba38e6525f331833d080d5a469d"
+  integrity sha512-IPOcUzAPP/HwEO7okx26D0s5OAddnXI/cZ1JaJKEYfiGkO3vXPavWm0wbDb+/e5mKYkGZMBSRy6bqsCh+xKMqw==
   dependencies:
     "@openzeppelin/contracts" "^3.1.0"
     "@venomswap/core" "^1.0.0"

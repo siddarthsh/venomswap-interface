@@ -130,6 +130,7 @@ export default function Pit({
   const pitSettings = chainId ? PIT_SETTINGS[chainId] : undefined
   const pitBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, pit, 'balanceOf', PIT_INTERFACE)
   const govTokenPitTokenRatio = usePitRatio()
+  const adjustedPitBalance = govTokenPitTokenRatio ? pitBalance?.multiply(govTokenPitTokenRatio) : undefined
 
   const userLiquidityStaked = pitBalance
   const userLiquidityUnstaked = govTokenBalance
@@ -238,10 +239,17 @@ export default function Pit({
           </StyledBottomCard>
         </BottomSection>
 
-        {account && (
+        {account && adjustedPitBalance && adjustedPitBalance?.greaterThan('0') && (
+          <TYPE.main>
+            You have {adjustedPitBalance?.toFixed(2, { groupSeparator: ',' })} {govToken?.symbol} tokens staked in
+            the&nbsp;{pitSettings?.name}.
+          </TYPE.main>
+        )}
+
+        {account && (!adjustedPitBalance || adjustedPitBalance?.equalTo('0')) && (
           <TYPE.main>
             You have {govTokenBalance?.toFixed(2, { groupSeparator: ',' })} {govToken?.symbol} tokens available to
-            deposit to the {pitSettings?.name}
+            deposit to the {pitSettings?.name}.
           </TYPE.main>
         )}
 
