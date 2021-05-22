@@ -3179,9 +3179,9 @@
   integrity sha512-9IMltV7ITwxnjuK0LYXlUZhYIB8wVAdwx5NAbGjHF9ss+zKL9FTyFfWTFif/EL6PCWvST+2B15ofUwSVZd17RA==
 
 "@venomswap/community-token-list@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@venomswap/community-token-list/-/community-token-list-1.3.0.tgz#9f871c040f1fe16de58e28055f7f3fc7147c9e46"
-  integrity sha512-EeC1cOzSe6DByVSAGZsZyS/8k6Ca3pOTH05bbHe5WFylmJjzFmsnrcIeztuhr6n2FxwbiouNOFmBr5dF+qGNyQ==
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/@venomswap/community-token-list/-/community-token-list-1.4.5.tgz#397bc688cff93dd5ccde0ee6f9d0a6001410fcaa"
+  integrity sha512-eWQcCNnu4QE2UDz3qI8mGPqFbJFlk29t1PGObMeVF/kJdCL8aIlXNwNy+JJHbpjJbPXgCM+MEEGaaxoeUnjK8A==
 
 "@venomswap/contracts@^1.0.4":
   version "1.0.4"
@@ -3202,6 +3202,11 @@
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@venomswap/default-token-list/-/default-token-list-1.9.0.tgz#c201c1f5794966463de1322559b18aa21bcf9bb1"
   integrity sha512-YrVRKUEavME9HA+qUAOyWL3O33HReVGBtNrRmxucgLFrWsgB0jb5/EFSTrOWtjt6MDNcVa7AfjbEcUax+gjfig==
+
+"@venomswap/default-token-list@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@venomswap/default-token-list/-/default-token-list-2.0.0.tgz#19e06b455feabbb0c82cbdc7709fa38e99a65b79"
+  integrity sha512-wjh/iZP8zltRS+juyhtL+KtZrQV/dna8IGj228Q8MSn4omWaxWUxZDF8DOdociRFZUd8RSrvH+FnxrXg4M2GLQ==
 
 "@venomswap/lib@1.0.0", "@venomswap/lib@^1.0.0":
   version "1.0.0"
