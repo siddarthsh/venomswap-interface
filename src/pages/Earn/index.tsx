@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { JSBI } from '@venomswap/sdk'
 import { BLOCKCHAIN_SETTINGS } from '@venomswap/sdk-extra'
 import { AutoColumn } from '../../components/Column'
@@ -8,19 +8,20 @@ import { useStakingInfo } from '../../state/stake/hooks'
 import { TYPE, StyledInternalLink } from '../../theme'
 //import { ButtonPrimary } from '../../components/Button'
 import PoolCard from '../../components/earn/PoolCard'
-import { ButtonWhite } from '../../components/Button'
+import { CustomButtonWhite } from '../../components/Button'
 import AwaitingRewards from '../../components/earn/AwaitingRewards'
 import { RowBetween } from '../../components/Row'
 import { CardSection, ExtraDataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 //import { Countdown } from './Countdown'
 import Loader from '../../components/Loader'
+import ClaimAllRewardsModal from '../../components/earn/ClaimAllRewardsModal'
 import { useActiveWeb3React } from '../../hooks'
 import useGovernanceToken from '../../hooks/useGovernanceToken'
 import useCalculateStakingInfoMembers from '../../hooks/useCalculateStakingInfoMembers'
 import useTotalCombinedTVL from '../../hooks/useTotalCombinedTVL'
 import useBaseStakingRewardsEmission from '../../hooks/useBaseStakingRewardsEmission'
 import { OutlineCard } from '../../components/Card'
-import filterStakingInfos from '../../utils/filterStakingInfos'
+import useFilterStakingInfos from '../../hooks/useFilterStakingInfos'
 import CombinedTVL from '../../components/CombinedTVL'
 
 const PageWrapper = styled(AutoColumn)`
@@ -68,6 +69,8 @@ export default function Earn() {
   const activePoolsOnly = true
   const stakingInfos = useStakingInfo(activePoolsOnly)
 
+  const [showClaimRewardsModal, setShowClaimRewardsModal] = useState(false)
+
   /**
    * only show staking cards with balance
    * @todo only account for this if rewards are inactive
@@ -81,11 +84,13 @@ export default function Earn() {
   const emissionsPerMinute =
     baseEmissions && blockchainSettings ? baseEmissions.multiply(JSBI.BigInt(blocksPerMinute)) : undefined
 
-  const activeStakingInfos = filterStakingInfos(stakingInfos, activePoolsOnly)
+  const activeStakingInfos = useFilterStakingInfos(stakingInfos, activePoolsOnly)
+  const inactiveStakingInfos = useFilterStakingInfos(stakingInfos, false)
   const stakingInfoStats = useCalculateStakingInfoMembers(chainId)
   const hasArchivedStakingPools =
-    (stakingInfoStats?.inactive && stakingInfoStats?.inactive > 0) ||
-    filterStakingInfos(stakingInfos, false)?.length > 0
+    (stakingInfoStats?.inactive && stakingInfoStats?.inactive > 0) || inactiveStakingInfos?.length > 0
+
+  const stakingInfosWithRewards = useFilterStakingInfos(activeStakingInfos, true, true)
 
   const TVLs = useTotalCombinedTVL(activeStakingInfos)
 
@@ -106,12 +111,24 @@ export default function Earn() {
                   governance token.
                 </TYPE.white>
               </RowBetween>{' '}
+              {stakingInfosWithRewards?.length > 0 && (
+                <RowBetween>
+                  <CustomButtonWhite
+                    padding="8px"
+                    borderRadius="8px"
+                    width="7em"
+                    onClick={() => setShowClaimRewardsModal(true)}
+                  >
+                    Claim all ({stakingInfosWithRewards.length})
+                  </CustomButtonWhite>
+                </RowBetween>
+              )}
               {hasArchivedStakingPools && (
                 <RowBetween>
                   <StyledInternalLink to={`/staking/archived`}>
-                    <ButtonWhite padding="8px" borderRadius="8px">
+                    <CustomButtonWhite padding="8px" borderRadius="8px">
                       Archived Pools
-                    </ButtonWhite>
+                    </CustomButtonWhite>
                   </StyledInternalLink>
                 </RowBetween>
               )}
@@ -121,6 +138,12 @@ export default function Earn() {
           <CardNoise />
         </ExtraDataCard>
       </TopSection>
+
+      <ClaimAllRewardsModal
+        isOpen={showClaimRewardsModal}
+        onDismiss={() => setShowClaimRewardsModal(false)}
+        stakingInfos={stakingInfosWithRewards}
+      />
 
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
         <DataRow style={{ alignItems: 'baseline' }}>
