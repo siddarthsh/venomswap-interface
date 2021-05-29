@@ -115,6 +115,11 @@ export const STAKING_REWARDS_INFO: {
       pid: 20,
       tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'WONE/1MATIC'),
       active: true
+    },
+    {
+      pid: 21,
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'JENN/VIPER'),
+      active: true
     }
   ],
   [ChainId.HARMONY_TESTNET]: [
