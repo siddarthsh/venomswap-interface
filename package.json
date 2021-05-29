@@ -129,6 +129,6 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@venomswap/default-token-list": "^2.0.0"
+    "@venomswap/default-token-list": "^2.1.0"
   }
 }
