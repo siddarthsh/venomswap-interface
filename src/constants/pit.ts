@@ -14,7 +14,7 @@ export const PIT_POOLS: {
     },
     {
       pid: 1,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'WONE/VIPER')
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'WONE/SLOTH')
     },
     {
       pid: 2,
@@ -22,7 +22,7 @@ export const PIT_POOLS: {
     },
     {
       pid: 3,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'BUSD/VIPER')
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'BUSD/SLOTH')
     },
     {
       pid: 4,

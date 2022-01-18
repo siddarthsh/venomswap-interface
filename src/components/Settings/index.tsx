@@ -86,7 +86,6 @@ const StyledMenu = styled.div`
 `
 
 const MenuFlyout = styled.span`
-  min-width: 20.125rem;
   background-color: ${({ theme }) => theme.bg2};
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.01);
@@ -95,12 +94,14 @@ const MenuFlyout = styled.span`
   flex-direction: column;
   font-size: 1rem;
   position: absolute;
-  top: 3rem;
+  top: 2rem;
   right: 0rem;
   z-index: 100;
 
+  min-width: 14.5rem;
   ${({ theme }) => theme.mediaWidth.upToMedium`
-    min-width: 18.125rem;
+    min-width: 14.5rem;
+    width:100%;
   `};
 `
 
@@ -190,7 +191,7 @@ export default function SettingsTab() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <AutoColumn gap="md" style={{ padding: '1rem' }}>
+          <AutoColumn gap="md" style={{ padding: '1rem .5rem' }}>
             <Text fontWeight={600} fontSize={14}>
               Transaction Settings
             </Text>

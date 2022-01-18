@@ -17,7 +17,7 @@ export const TextBox = styled.div`
 `
 
 export const DataCard = styled(AutoColumn)<{ disabled?: boolean }>`
-  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #ff007a 0%, #2172e5 100%);
+  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #ff007a 0%, #664147 100%);
   border-radius: 12px;
   width: 100%;
   position: relative;
@@ -80,7 +80,7 @@ export const CardNoise = styled.span`
 `
 
 export const CardSection = styled(AutoColumn)<{ disabled?: boolean }>`
-  padding: 1rem;
+  padding: 0.5rem;
   z-index: 1;
   opacity: ${({ disabled }) => disabled && '0.4'};
 `

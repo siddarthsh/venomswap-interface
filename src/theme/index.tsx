@@ -1,4 +1,3 @@
-import { transparentize } from 'polished'
 import React, { useMemo } from 'react'
 import styled, {
   ThemeProvider as StyledComponentsThemeProvider,
@@ -62,17 +61,17 @@ export function defaultColors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#2172E5' : '#ff007a',
+    primary1: darkMode ? '#2F9C95' : '#ff007a',
     primary2: darkMode ? '#3680E7' : '#FF8CC3',
     primary3: darkMode ? '#4D8FEA' : '#FF99C9',
     primary4: darkMode ? '#376bad70' : '#F6DDE8',
     primary5: darkMode ? '#153d6f70' : '#FDEAF1',
 
     // color text
-    primaryText1: darkMode ? '#6da8ff' : '#ff007a',
+    primaryText1: darkMode ? '#ffffff' : '#ff007a',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#ff007a',
+    secondary1: darkMode ? '#664147' : '#ff007a',
     secondary2: darkMode ? '#17000b26' : '#F6DDE8',
     secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 
@@ -83,21 +82,21 @@ export function defaultColors(darkMode: boolean): Colors {
     green1: '#27AE60',
     yellow1: '#FFE270',
     yellow2: '#F3841E',
-    blue1: '#2172E5',
+    blue1: '#664147',
 
     // dont wanna forget these blue yet
     // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
     // blue5: darkMode ? '#153d6f70' : '#EBF4FF',
 
     // Added:
-    tokenButtonGradientStart: '#008c6b',
-    tokenButtonGradientEnd: '#005224',
-    customCardGradientStart: '#008c6b',
+    tokenButtonGradientStart: '#40C9A2',
+    tokenButtonGradientEnd: '#2F9C95',
+    customCardGradientStart: '#40C9A2',
     customCardGradientEnd: '#00c09c'
   }
 }
 
-export function viperColors(darkMode: boolean): Colors {
+export function slothColors(darkMode: boolean): Colors {
   return {
     // base
     white,
@@ -122,7 +121,7 @@ export function viperColors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#669999' : '#00c09c',
+    primary1: darkMode ? '#2F9C95' : '#00c09c',
     primary2: darkMode ? '#3680E7' : '#FF8CC3',
     primary3: darkMode ? '#4D8FEA' : '#FF99C9',
     primary4: darkMode ? '#376bad70' : '#F6DDE8',
@@ -132,7 +131,7 @@ export function viperColors(darkMode: boolean): Colors {
     primaryText1: darkMode ? '#669999' : '#00c09c',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#ff007a',
+    secondary1: darkMode ? '#664147' : '#ff007a',
     secondary2: darkMode ? '#17000b26' : '#F6DDE8',
     secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 
@@ -143,16 +142,16 @@ export function viperColors(darkMode: boolean): Colors {
     green1: '#27AE60',
     yellow1: '#FFE270',
     yellow2: '#F3841E',
-    blue1: '#2172E5',
+    blue1: '#664147',
 
     // dont wanna forget these blue yet
     // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
     // blue5: darkMode ? '#153d6f70' : '#EBF4FF',
 
     // Added:
-    tokenButtonGradientStart: '#008c6b',
-    tokenButtonGradientEnd: '#005224',
-    customCardGradientStart: '#008c6b',
+    tokenButtonGradientStart: '#40C9A2',
+    tokenButtonGradientEnd: '#2F9C95',
+    customCardGradientStart: '#40C9A2',
     customCardGradientEnd: '#00c09c'
   }
 }
@@ -182,17 +181,17 @@ export function bscColors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#2172E5' : '#ffad00',
+    primary1: darkMode ? '#664147' : '#ffad00',
     primary2: darkMode ? '#3680E7' : '#FFE08C',
     primary3: darkMode ? '#4D8FEA' : '#F2CB61',
     primary4: darkMode ? '#376bad70' : '#FFE08C',
     primary5: darkMode ? '#153d6f70' : '#FAECC5',
 
     // color text
-    primaryText1: darkMode ? '#6da8ff' : '#ffad00',
+    primaryText1: darkMode ? '#ffffff' : '#ffad00',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#ffad00',
+    secondary1: darkMode ? '#664147' : '#ffad00',
     secondary2: darkMode ? '#17000b26' : '#FFE08C',
     secondary3: darkMode ? '#17000b26' : '#FAECC5',
 
@@ -203,7 +202,7 @@ export function bscColors(darkMode: boolean): Colors {
     green1: '#27AE60',
     yellow1: '#FFE270',
     yellow2: '#F3841E',
-    blue1: '#2172E5',
+    blue1: '#664147',
 
     // dont wanna forget these blue yet
     // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
@@ -242,17 +241,17 @@ export function harmonyColors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#2172E5' : '#00AEE9',
+    primary1: darkMode ? '#664147' : '#00AEE9',
     primary2: darkMode ? '#3680E7' : '#69FABD',
     primary3: darkMode ? '#4D8FEA' : '#00c5eb',
     primary4: darkMode ? '#376bad70' : '#bcecfd',
     primary5: darkMode ? '#153d6f70' : '#d9f4fd',
 
     // color text
-    primaryText1: darkMode ? '#6da8ff' : '#00AEE9',
+    primaryText1: darkMode ? '#ffffff' : '#00AEE9',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#00AEE9',
+    secondary1: darkMode ? '#664147' : '#00AEE9',
     secondary2: darkMode ? '#17000b26' : '#F6DDE8',
     secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 
@@ -263,16 +262,16 @@ export function harmonyColors(darkMode: boolean): Colors {
     green1: '#27AE60',
     yellow1: '#FFE270',
     yellow2: '#F3841E',
-    blue1: '#2172E5',
+    blue1: '#664147',
 
     // dont wanna forget these blue yet
     // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
     // blue5: darkMode ? '#153d6f70' : '#EBF4FF',
 
     // Added:
-    tokenButtonGradientStart: '#008c6b',
-    tokenButtonGradientEnd: '#005224',
-    customCardGradientStart: '#008c6b',
+    tokenButtonGradientStart: '#40C9A2',
+    tokenButtonGradientEnd: '#2F9C95',
+    customCardGradientStart: '#40C9A2',
     customCardGradientEnd: '#00c09c'
   }
 }
@@ -284,7 +283,7 @@ export function colors(blockchain: Blockchain, darkMode: boolean): Colors {
     case Blockchain.HARMONY:
       return harmonyColors(darkMode)
     default:
-      return viperColors(darkMode)
+      return slothColors(darkMode)
   }
 }
 
@@ -379,12 +378,12 @@ export const TYPE = {
 
 export const FixedGlobalStyle = createGlobalStyle`
 html, input, textarea, button {
-  font-family: 'Inter', sans-serif;
+  font-family: "VT323";
   font-display: fallback;
 }
 @supports (font-variation-settings: normal) {
   html, input, textarea, button {
-    font-family: 'Inter var', sans-serif;
+    font-family: "VT323";
   }
 }
 
@@ -407,7 +406,7 @@ button {
 }
 
 html {
-  font-size: 16px;
+  font-size: 24px;
   font-variant: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -425,12 +424,15 @@ html {
 
 body {
   min-height: 100vh;
-  background-position: 0 -30vh;
+}
+
+body:before {
+  content: ' ';
+  position: absolute;
   background-repeat: no-repeat;
-  background-image: ${({ theme }) =>
-    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.9, theme.primary1)} 0%, ${transparentize(
-      1,
-      theme.bg1
-    )} 100%)`};
+  background-attachment: fixed;
+  opacity:0.6;
+  width:100%;
+  height:100%;
 }
 `

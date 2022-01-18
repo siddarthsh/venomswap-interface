@@ -1,6 +1,6 @@
 import { Blockchain } from '@venomswap/sdk'
 import { BLOCKCHAIN } from '../connectors'
-import viperTokenLogo from '../assets/images/viper-token-logo.png'
+import slothTokenLogo from '../assets/images/sloth-token-logo.png'
 import cobraTokenLogo from '../assets/images/cobra-token-logo.png'
 
 export default function getTokenLogo(): string {
@@ -8,8 +8,8 @@ export default function getTokenLogo(): string {
     case Blockchain.BINANCE_SMART_CHAIN:
       return cobraTokenLogo
     case Blockchain.HARMONY:
-      return viperTokenLogo
+      return slothTokenLogo
     default:
-      return viperTokenLogo
+      return slothTokenLogo
   }
 }

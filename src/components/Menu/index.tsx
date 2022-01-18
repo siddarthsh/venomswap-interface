@@ -66,12 +66,12 @@ const MenuFlyout = styled.span`
   flex-direction: column;
   font-size: 1rem;
   position: absolute;
-  top: 4rem;
+  top: 2.5rem;
   right: 0rem;
   z-index: 100;
 
   ${({ theme }) => theme.mediaWidth.upToMedium`
-    top: -17.25rem;
+    top: -9.5rem;
   `};
 `
 
@@ -111,15 +111,15 @@ export default function Menu() {
 
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://info.viper.exchange">
+          <MenuItem id="link" href="https://info.defimons.com">
             <PieChart size={14} />
             Analytics
           </MenuItem>
-          <MenuItem id="link" href="https://discord.viper.exchange">
+          <MenuItem id="link" href="https://discord.defimons.com">
             <MessageSquare size={14} />
             Discord
           </MenuItem>
-          <MenuItem id="link" href="https://t.me/VenomDAO">
+          <MenuItem id="link" href="https://t.me/slothfi">
             <Send size={14} />
             Telegram
           </MenuItem>

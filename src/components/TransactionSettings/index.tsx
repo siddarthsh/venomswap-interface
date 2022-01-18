@@ -21,11 +21,11 @@ enum DeadlineError {
 const FancyButton = styled.button`
   color: ${({ theme }) => theme.text1};
   align-items: center;
-  height: 2rem;
+  height: 1.5rem;
   border-radius: 36px;
   font-size: 1rem;
   width: auto;
-  min-width: 3.5rem;
+  min-width: 3rem;
   border: 1px solid ${({ theme }) => theme.bg3};
   outline: none;
   background: ${({ theme }) => theme.bg1};
@@ -60,7 +60,7 @@ const Input = styled.input`
 `
 
 const OptionCustom = styled(FancyButton)<{ active?: boolean; warning?: boolean }>`
-  height: 2rem;
+  height: 1.5rem;
   position: relative;
   padding: 0 0.75rem;
   flex: 1;

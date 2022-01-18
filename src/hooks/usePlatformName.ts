@@ -7,10 +7,10 @@ export default function usePlatformName(): string {
     case Blockchain.BINANCE_SMART_CHAIN:
       return 'Cobraswap'
     case Blockchain.HARMONY:
-      return 'ViperSwap'
+      return 'SlothBank'
     case Blockchain.ETHEREUM:
       return 'Venomswap'
     default:
-      return 'ViperSwap'
+      return 'SlothBank'
   }
 }

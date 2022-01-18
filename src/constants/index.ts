@@ -26,11 +26,11 @@ export const GOVERNANCE_ADDRESS = '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
 export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
 
 export const GOVERNANCE_TOKEN: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, ZERO_ONE_ADDRESS, 18, 'VIPER', 'Viper'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ONE_ADDRESS, 18, 'VIPER', 'Viper'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, ZERO_ONE_ADDRESS, 18, 'VIPER', 'Viper'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, ZERO_ONE_ADDRESS, 18, 'VIPER', 'Viper'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ONE_ADDRESS, 18, 'VIPER', 'Viper'),
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, ZERO_ONE_ADDRESS, 18, 'SLOTH', 'Sloth'),
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ONE_ADDRESS, 18, 'SLOTH', 'Sloth'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, ZERO_ONE_ADDRESS, 18, 'SLOTH', 'Sloth'),
+  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, ZERO_ONE_ADDRESS, 18, 'SLOTH', 'Sloth'),
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ONE_ADDRESS, 18, 'SLOTH', 'Sloth'),
   [ChainId.BSC_MAINNET]: new Token(ChainId.BSC_MAINNET, ZERO_ONE_ADDRESS, 18, 'COBRA', 'Cobra'),
   [ChainId.BSC_TESTNET]: new Token(
     ChainId.BSC_TESTNET,
@@ -43,15 +43,15 @@ export const GOVERNANCE_TOKEN: { [chainId in ChainId]: Token } = {
     ChainId.HARMONY_MAINNET,
     '0xEa589E93Ff18b1a1F1e9BaC7EF3E86Ab62addc79',
     18,
-    'VIPER',
-    'Viper'
+    'SLOTH',
+    'Sloth'
   ),
   [ChainId.HARMONY_TESTNET]: new Token(
     ChainId.HARMONY_TESTNET,
     '0x69A655c56087D927eb05247FB56495a0f19B9f70',
     18,
-    'VIPER',
-    'Viper'
+    'SLOTH',
+    'Sloth'
   )
 }
 
@@ -80,11 +80,11 @@ export const PIT_BREEDER: { [chainId in ChainId]: string } = {
 }
 
 export const PIT: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, ZERO_ONE_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ONE_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, ZERO_ONE_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, ZERO_ONE_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ONE_ADDRESS, 18, 'xVIPER', 'ViperPit'),
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, ZERO_ONE_ADDRESS, 18, 'xSLOTH', 'SlothGold'),
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ONE_ADDRESS, 18, 'xSLOTH', 'SlothGold'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, ZERO_ONE_ADDRESS, 18, 'xSLOTH', 'SlothGold'),
+  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, ZERO_ONE_ADDRESS, 18, 'xSLOTH', 'SlothGold'),
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ONE_ADDRESS, 18, 'xSLOTH', 'SlothGold'),
   [ChainId.BSC_MAINNET]: new Token(ChainId.BSC_MAINNET, ZERO_ONE_ADDRESS, 18, 'xCOBRA', 'CobraDen'),
   [ChainId.BSC_TESTNET]: new Token(
     ChainId.BSC_TESTNET,
@@ -97,15 +97,15 @@ export const PIT: { [chainId in ChainId]: Token } = {
     ChainId.HARMONY_MAINNET,
     '0xE064a68994e9380250CfEE3E8C0e2AC5C0924548',
     18,
-    'xVIPER',
-    'ViperPit'
+    'xSLOTH',
+    'SlothGold'
   ),
   [ChainId.HARMONY_TESTNET]: new Token(
     ChainId.HARMONY_TESTNET,
     '0x1e11CA9830Cd3a9867990CE2769EDf77F21ae5FA',
     18,
-    'xVIPER',
-    'ViperPit'
+    'xSLOTH',
+    'SlothGold'
   )
 }
 
@@ -117,8 +117,8 @@ export const PIT_SETTINGS: { [chainId in ChainId]: Record<string, string> } = {
   [ChainId.KOVAN]: { name: '', path: '' },
   [ChainId.BSC_MAINNET]: { name: 'CobraDen', path: '/cobraDen' },
   [ChainId.BSC_TESTNET]: { name: 'CobraDen', path: '/cobraDen' },
-  [ChainId.HARMONY_MAINNET]: { name: 'ViperPit', path: '/viperPit' },
-  [ChainId.HARMONY_TESTNET]: { name: 'ViperPit', path: '/viperPit' }
+  [ChainId.HARMONY_MAINNET]: { name: 'Gold', path: '/gold' },
+  [ChainId.HARMONY_TESTNET]: { name: 'Gold', path: '/gold' }
 }
 
 export const WEB_INTERFACES: { [chainId in ChainId]: string[] } = {
@@ -127,10 +127,10 @@ export const WEB_INTERFACES: { [chainId in ChainId]: string[] } = {
   [ChainId.ROPSTEN]: [''],
   [ChainId.GÖRLI]: [''],
   [ChainId.KOVAN]: [''],
-  [ChainId.BSC_MAINNET]: ['cobra.exchange', 'cobraswap.io', 'cobradex.org'],
-  [ChainId.BSC_TESTNET]: ['cobra.exchange', 'cobraswap.io', 'cobradex.org'],
-  [ChainId.HARMONY_MAINNET]: ['viper.exchange', 'viperswap.one', 'viperswap.com', 'viperswap.io', 'viperswap.org'],
-  [ChainId.HARMONY_TESTNET]: ['viper.exchange', 'viperswap.one', 'viperswap.com', 'viperswap.io', 'viperswap.org']
+  [ChainId.BSC_MAINNET]: [],
+  [ChainId.BSC_TESTNET]: [],
+  [ChainId.HARMONY_MAINNET]: ['bank.defimons.com'],
+  [ChainId.HARMONY_TESTNET]: ['bank.defimons.com']
 }
 
 export { PRELOADED_PROPOSALS } from './proposals'
@@ -186,7 +186,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     getTokenWithDefault(ChainId.HARMONY_MAINNET, 'BUSD'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, 'bscBUSD'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, '1USDC'),
-    getTokenWithDefault(ChainId.HARMONY_MAINNET, 'VIPER'),
+    getTokenWithDefault(ChainId.HARMONY_MAINNET, 'SLOTH'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, '1ETH'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, 'LINK')
   ]
@@ -209,7 +209,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.HARMONY_MAINNET]: [
     ...WETH_ONLY[ChainId.HARMONY_MAINNET],
     getTokenWithDefault(ChainId.HARMONY_MAINNET, 'BUSD'),
-    getTokenWithDefault(ChainId.HARMONY_MAINNET, 'VIPER')
+    getTokenWithDefault(ChainId.HARMONY_MAINNET, 'SLOTH')
   ]
 }
 
@@ -222,7 +222,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     getTokenWithDefault(ChainId.HARMONY_MAINNET, 'BUSD'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, 'bscBUSD'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, '1USDC'),
-    getTokenWithDefault(ChainId.HARMONY_MAINNET, 'VIPER'),
+    getTokenWithDefault(ChainId.HARMONY_MAINNET, 'SLOTH'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, '1ETH'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, 'LINK')
   ]

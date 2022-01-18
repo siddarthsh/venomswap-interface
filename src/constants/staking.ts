@@ -18,7 +18,7 @@ export const STAKING_REWARDS_INFO: {
     },
     {
       pid: 1,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'WONE/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'WONE/SLOTH'),
       active: true
     },
     {
@@ -28,7 +28,7 @@ export const STAKING_REWARDS_INFO: {
     },
     {
       pid: 3,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'BUSD/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'BUSD/SLOTH'),
       active: true
     },
     {
@@ -43,62 +43,62 @@ export const STAKING_REWARDS_INFO: {
     },
     {
       pid: 6,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1ROT/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1ROT/SLOTH'),
       active: true
     },
     {
       pid: 7,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1MAGGOT/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1MAGGOT/SLOTH'),
       active: true
     },
     {
       pid: 8,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1WISE/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1WISE/SLOTH'),
       active: true
     },
     {
       pid: 9,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1DSLA/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1DSLA/SLOTH'),
       active: true
     },
     {
       pid: 10,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'LINK/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'LINK/SLOTH'),
       active: true
     },
     {
       pid: 11,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1AAVE/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1AAVE/SLOTH'),
       active: true
     },
     {
       pid: 12,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1SNX/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1SNX/SLOTH'),
       active: true
     },
     {
       pid: 13,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1YFI/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1YFI/SLOTH'),
       active: true
     },
     {
       pid: 14,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '11INCH/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '11INCH/SLOTH'),
       active: true
     },
     {
       pid: 15,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'bscCAKE/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'bscCAKE/SLOTH'),
       active: true
     },
     {
       pid: 16,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1SUSHI/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1SUSHI/SLOTH'),
       active: true
     },
     {
       pid: 17,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1UNI/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, '1UNI/SLOTH'),
       active: true
     },
     {
@@ -118,7 +118,7 @@ export const STAKING_REWARDS_INFO: {
     },
     {
       pid: 21,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'JENN/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_MAINNET, 'JENN/SLOTH'),
       active: true
     }
   ],
@@ -130,7 +130,7 @@ export const STAKING_REWARDS_INFO: {
     },
     {
       pid: 1,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_TESTNET, 'WONE/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_TESTNET, 'WONE/SLOTH'),
       active: true
     },
     {
@@ -140,7 +140,7 @@ export const STAKING_REWARDS_INFO: {
     },
     {
       pid: 3,
-      tokens: getPairTokensWithDefaults(ChainId.HARMONY_TESTNET, '1BUSD/VIPER'),
+      tokens: getPairTokensWithDefaults(ChainId.HARMONY_TESTNET, '1BUSD/SLOTH'),
       active: true
     }
   ],
